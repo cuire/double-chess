@@ -6,3 +6,11 @@ Double Chess Variant is a variant of chess that is played on a 16x12 board with 
 - To win, a player must checkmate either of their opponent's kings.
 - Initially pawn can move up to 4 squares forward.
 - A king may castle only on its own half of the board.
+
+## Goals
+- [ ] PWA with offline support
+- [ ] Store game state in local storage (or indexedDB) (wins for each player, current game, etc.)
+- [ ] Be able to play against another player on the same device
+- [ ] Be able to rotate the board on each player's turn or lock the board to a specific orientation
+- [ ] Customizable time controls
+- [ ] Try to connect to a chess engine to play against (not sure if this is possible with that game variant)
