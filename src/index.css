@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-board {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url("/assets/board.svg");
+}
+
+.aspect-board {
+  aspect-ratio: 16/12;
+}
+
+.piece {
+  /* 
+  6.25% is 1/16 and 8.33% is 1/12 
+  using these with absolute position in relative board
+  we can position the pieces using translateX(x * 100%) 
+  and translateY(y * 100%)
+  */
+  @apply absolute top-0 left-0 w-[6.25%] h-[8.33%]
+        touch-none bg-cover;
+}
+
+.king-black {
+  background-image: url("/assets/king-black.svg");
+}
