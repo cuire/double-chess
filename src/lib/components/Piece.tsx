@@ -12,14 +12,18 @@ export type PieceProps = {
   position: { x: number; y: number };
 };
 
-export const Piece: React.FC<PieceProps> = ({ position, type, color }) => {
+export const Piece: React.FC<PieceProps> = ({
+  position: { x, y },
+  type,
+  color,
+}) => {
+  const pieceType = `${type}-${color}`;
+  const piecePosition = `cell-${x}-${y}`;
+
   return (
     <div
-      className={`piece ${type}-${color}`}
+      className={`piece ${piecePosition} ${pieceType}`}
       style={{
-        transform: `
-        translateX(${position.x * 100}%) 
-        translateY(${position.y * 100}%)`,
         backgroundColor: "#5A9367",
       }}
     />
